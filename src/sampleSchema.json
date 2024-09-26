@@ -1,0 +1,57 @@
+{
+  "title": "User Profile form",
+  "fields": [
+    {
+      "name": "firstName",
+      "label": "First Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "lastName",
+      "label": "Last Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "age",
+      "label": "Age",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "username",
+      "label": "Username",
+      "type": "text",
+      "required": true,
+      "minLength": 4
+    },
+    {
+      "name": "password",
+      "label": "Password",
+      "type": "password",
+      "minLength": 8,
+      "required": true
+    },
+    {
+      "name": "bio",
+      "label": "Bio",
+      "type": "textarea",
+      "required": false
+    },
+    {
+      "name": "telephone",
+      "label": "Telephone",
+      "type": "tel",
+      "minLength": 10,
+      "required": true
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "select",
+      "options": ["Male", "Female", "Other"],
+      "required": false
+    }
+  ]
+}
