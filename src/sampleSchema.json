@@ -37,7 +37,9 @@
       "name": "bio",
       "label": "Bio",
       "type": "textarea",
-      "required": false
+      "required": false,
+      "rows": "4",
+      "cols": "30"
     },
     {
       "name": "telephone",

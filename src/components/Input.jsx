@@ -1,5 +1,5 @@
 const Input = ({ field, value, onChange }) => {
-  const { type, name, required, label, options, minLength } = field;
+  const { type, name, required, label, options, minLength, rows, cols } = field;
 
   switch (type) {
     case "text":
@@ -52,6 +52,8 @@ const Input = ({ field, value, onChange }) => {
               value={value}
               onChange={onChange}
               required={required}
+              rows={rows}
+              cols={cols}
             />
           </label>
         </div>
