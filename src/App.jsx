@@ -16,11 +16,20 @@ const App = () => {
   return (
     <div>
       <h1>React Form Generator</h1>
-      <div>
-        <h2>JSON schema:</h2>
-        <textarea value={schema} onChange={handleSchema} rows="30" cols="50" />
+      <div className="container">
+        <div>
+          <h2>JSON schema:</h2>
+          <textarea
+            value={schema}
+            onChange={handleSchema}
+            rows="30"
+            cols="50"
+          />
+        </div>
+        <div>
+          <Form schema={JSON.parse(schema)} onSubmit={handleSubmit} />
+        </div>
       </div>
-      <Form schema={JSON.parse(schema)} onSubmit={handleSubmit} />
     </div>
   );
 };
