@@ -4,13 +4,14 @@ import sampleSchema from "./sampleSchema.json";
 
 const App = () => {
   const [schema, setSchema] = useState(JSON.stringify(sampleSchema));
+  const [inputSchema, setInputSchema] = useState(schema);
   const handleSubmit = (formData) => {
     //Make POST request here
     console.log("Form data:", formData);
   };
 
   const handleSchema = ({ target }) => {
-    setSchema(target.value);
+    setInputSchema(target.value);
   };
 
   return (
@@ -19,12 +20,20 @@ const App = () => {
       <div className="container">
         <div>
           <h2>JSON schema:</h2>
-          <textarea
-            value={schema}
-            onChange={handleSchema}
-            rows="30"
-            cols="50"
-          />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              setSchema(inputSchema);
+            }}
+          >
+            <textarea
+              value={inputSchema}
+              onChange={handleSchema}
+              rows="30"
+              cols="50"
+            />
+            <button type="submit">Generate Form</button>
+          </form>
         </div>
         <div>
           <Form schema={JSON.parse(schema)} onSubmit={handleSubmit} />
