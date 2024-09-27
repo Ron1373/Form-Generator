@@ -54,6 +54,28 @@
       "type": "select",
       "options": ["Male", "Female", "Other"],
       "required": false
+    },
+    {
+      "name": "favoriteColors",
+      "label": "Favorite Colors",
+      "type": "checkbox",
+      "options": ["Red", "Green", "Blue"]
+    },
+    {
+      "name": "membership",
+      "label": "Membership",
+      "type": "radio",
+      "options": ["Gold", "Silver", "Regular"]
+    },
+    {
+      "name": "birthday",
+      "label": "Birthday",
+      "type": "date"
+    },
+    {
+      "name": "profilePic",
+      "label": "Profile Picture",
+      "type": "file"
     }
   ]
 }
